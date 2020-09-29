@@ -542,11 +542,3 @@ resource "nsxt_policy_security_policy" "allow_blue" {
         scope               = [nsxt_policy_group.blue_servers.path]
     }
 }
-
-# DHCP Server 
-# resource "nsxt_policy_dhcp_server" "test" {
-#     display_name      = "DHCP-Server-01"
-#     description       = "DHCP Server"
-#     edge_cluster_path = data.nsxt_policy_edge_cluster.edge_cluster_vrf.path
-#     lease_time        = 86400
-# }
