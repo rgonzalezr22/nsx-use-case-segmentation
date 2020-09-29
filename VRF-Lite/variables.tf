@@ -10,7 +10,7 @@ variable "nsx_manager" {
 }
 
 variable "password" {
-    default = "VMware1!rdejong"
+    default = "password"
 }
 
 # Enter Edge Nodes Display Name. Required for external interfaces.
