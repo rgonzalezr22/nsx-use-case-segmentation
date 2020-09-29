@@ -132,7 +132,7 @@ resource "nsxt_policy_tier0_gateway" "vrf_tier0_gw" {
         ecmp            = true               
         local_as_num    = "65005"
         inter_sr_ibgp   = true
-        multipath_relax = false
+        multipath_relax = true
     }
 }
 
@@ -152,7 +152,9 @@ resource "nsxt_policy_tier0_gateway" "red_vrf" {
     }
 
     bgp_config {
-        ecmp            = true               
+        ecmp            = true
+        inter_sr_ibgp   = true
+        multipath_relax = true              
     }
 
     tag {
@@ -177,7 +179,9 @@ resource "nsxt_policy_tier0_gateway" "blue_vrf" {
     }
 
     bgp_config {
-        ecmp            = true               
+        ecmp            = true
+        inter_sr_ibgp   = true
+        multipath_relax = true          
     }
 
     tag {
