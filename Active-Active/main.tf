@@ -351,7 +351,7 @@ resource "nsxt_policy_service" "service_tcp8443" {
 
 # Create Security Policies
 
-# DFW Infrastructyre Category Rules
+# DFW Infrastructure Category Rules
 resource "nsxt_policy_security_policy" "Infrastructure" {
   display_name = "Infrastructure"
   description  = "Terraform provisioned Security Policy"
