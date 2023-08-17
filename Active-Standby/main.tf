@@ -3,11 +3,7 @@ data "nsxt_policy_transport_zone" "overlay_tz" {
     display_name = "TZ-OVERLAY"
 }
  
-data "nsxt_policy_transport_zone" "vlan_tz" {
-    display_name = "TZ-VLAN"
-}
- 
-data "nsxt_policy_edge_cluster" "edge_cluster" {
+data "nsxt_policy_edge_cluster" "edge-cluster" {
     display_name = "edge-cluster"
 }
  
@@ -39,9 +35,6 @@ provider "nsxt" {
 data "nsxt_policy_tier0_gateway" "T0" {
   display_name = "Provider-LR"
 }
-
-data "nsxt_policy_edge_cluster" "edge-cluster" {
-  display_name = "edge-cluster"
 
 # Create Tier-1 Gateway
 resource "nsxt_policy_tier1_gateway" "tier1_gw" {
