@@ -171,6 +171,34 @@ resource "nsxt_policy_group" "blue_servers" {
         }
     }
 }
+
+resource "nsxt_policy_group" "dev_servers" {
+    display_name = var.nsx_group_dev_servers
+    description  = "Terraform provisioned Group"
+ 
+    criteria {
+        condition {
+            key         = "Tag"
+            member_type = "VirtualMachine"
+            operator    = "CONTAINS"
+            value       = "Dev"
+        }
+    }
+}
+ 
+resource "nsxt_policy_group" "prod_servers" {
+    display_name = var.nsx_group_prod_servers
+    description  = "Terraform provisioned Group"
+ 
+    criteria {
+        condition {
+            key         = "Tag"
+            member_type = "VirtualMachine"
+            operator    = "CONTAINS"
+            value       = "Prod"
+        }
+    }
+}
  
 # Create Custom Services
 resource "nsxt_policy_service" "service_tcp8443" {
