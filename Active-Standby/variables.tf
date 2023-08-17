@@ -1,7 +1,7 @@
 # Variables
  
 variable "nsx_manager" {
-    default = "10.10.10.10"
+    default = "172.16.0.11"
 }
  
 # Username & Password for NSX-T Manager
@@ -10,7 +10,7 @@ variable "username" {
 }
  
 variable "password" {
-    default = "yourpassword"
+    default = "dAyhMYKEcvaPf=8W"
 }
  
 # Enter Edge Nodes Display Name. Required for external interfaces.
