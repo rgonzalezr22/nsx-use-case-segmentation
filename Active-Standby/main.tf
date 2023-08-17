@@ -1,4 +1,14 @@
 # Data Sources we need for reference later
+
+terraform {
+  required_providers {
+    nsxt = {
+      source = "vmware/nsxt"
+    }
+  }
+}
+
+
 data "nsxt_policy_transport_zone" "overlay_tz" {
     display_name = "TZ-OVERLAY"
 }
