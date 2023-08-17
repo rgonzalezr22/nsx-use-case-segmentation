@@ -49,3 +49,11 @@ variable "nsx_group_db" {
 variable "nsx_group_blue" {
     default = "Blue Application"
 }
+
+variable "nsx_group_web" {
+    default = "Prod Servers"
+}
+ 
+variable "nsx_group_app" {
+    default = "Dev Servers"
+}
